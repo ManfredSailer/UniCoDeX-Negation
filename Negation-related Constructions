@@ -1,5 +1,29 @@
+# Tools
+https://match.grew.fr/
+
 # Negation-related Croft Constructions
 
+# German:
+# Negation particle "nicht"
+
+pattern{
+Neg[form="nicht"]
+}
+
+# Neg-word
+pattern{
+Neg[lemma="niemand"|"nichts"|"nirgends"|"kein"|"nirgendwo"]
+}
+
+pattern{
+V[upos="VERB"];
+Neg[lemma="niemand"|"nichts"|"nirgends"|"kein"|"nirgendwo"];
+Subj[];
+V-[nsubj]->Subj;
+V->Neg
+}
+
+# English:
 # Negative clauses in English according to Huddleston & Pullum
 
 Verbal negation:
